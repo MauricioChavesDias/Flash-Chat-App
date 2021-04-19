@@ -11,12 +11,12 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        //using a pod to create the animation
+        titleLabel.text = "⚡️FlashChat"
     }
-    
+
 
 }
