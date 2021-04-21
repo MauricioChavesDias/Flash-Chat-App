@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //using a pod to create the animation
-        titleLabel.text = "⚡️FlashChat"
+        titleLabel.text = K.titleApp
     }
 
 
