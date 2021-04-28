@@ -10,7 +10,7 @@ Flash Chat is an internet based messaging app similar to WhatsApp, the popular m
 
 ## Screenshot
 
-<img src= Documentation/Screenshot1.gif  height="375" width="175">
+<img src= Documentation/ScreenShot1.gif  height="375" width="175">
 
 
 
