@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var labelMessage: UILabel!
     
     @IBAction func registerPressed(_ sender: UIButton) {
         //sender.isEnabled = false
@@ -20,7 +21,10 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)
+                    self.labelMessage.text = e.localizedDescription
+                    
                 } else {
+                    self.labelMessage.text = "You have successfully registered!"
                     self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
                 
