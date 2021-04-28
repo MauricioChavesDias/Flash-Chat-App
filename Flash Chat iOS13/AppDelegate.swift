@@ -8,13 +8,25 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
+        let db = Firestore.firestore()
+        //enable the third-party lib IQKeyboardManagerSwift to handle keyboard.
+        IQKeyboardManager.shared.enable = true
+        // disable the toolbar in the keyboard
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        // When click outside of the textfield it makes dismiss the keyboard
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
+        print(db)
+
         return true
     }
 

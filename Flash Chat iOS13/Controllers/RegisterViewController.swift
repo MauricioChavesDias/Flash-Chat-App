@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     @IBAction func registerPressed(_ sender: UIButton) {
-        
+        //sender.isEnabled = false
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
@@ -31,4 +31,5 @@ class RegisterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //
     }
+    
 }

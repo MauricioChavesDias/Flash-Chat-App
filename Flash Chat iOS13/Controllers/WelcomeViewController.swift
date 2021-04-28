@@ -14,9 +14,18 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
         //using a pod to create the animation
         titleLabel.text = K.titleApp
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
 }
